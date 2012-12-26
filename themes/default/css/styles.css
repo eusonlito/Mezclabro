@@ -1,0 +1,219 @@
+/* Twitter Bootstrap size hacks */
+
+body {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    font-size: 0.85em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 32px;
+}
+
+h1 small {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.page-header {
+    margin: 0 0 25px 0;
+}
+
+.label, .badge {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.btn {
+    font-size: 12px;
+}
+
+.btn-large {
+    font-size: 16px;
+}
+
+.alert {
+    padding: 8px 15px;
+}
+
+.alert .close {
+    top: auto;
+    right: auto;
+}
+
+.radio.inline, .checkbox.inline {
+    display: block;
+}
+
+/* Custom styles */
+
+.login-form.well {
+    padding-bottom: 0;
+}
+
+.login-form .form-actions {
+    margin-bottom: 0;
+}
+
+li#updates > a.active {
+    background-color: #F89406;
+    color: white;
+}
+
+li#updates ul span {
+    padding: 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+div.home div.well, #new-game div.well {
+    height: 70px;
+    overflow: hidden;
+}
+
+.tile-50 {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: url('../images/tile-50.png') no-repeat;
+}
+
+.tile-50 span.letter {
+    display: block;
+    float: left;
+    width: 25px;
+    height: 35px;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.tile-50 span.points {
+    display: block;
+    float: left;
+    width: 15px;
+    height: 50px;
+    font-size: 11px;
+}
+
+.tile-50 span.bonus {
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    margin-top: -24px;
+    margin-right: 0px;
+    font-weight: bold;
+    text-shadow: 1px 1px #FFF;
+}
+
+.tile-50 span.bonus-DL {
+    color: green;
+}
+
+.tile-50 span.bonus-TL {
+    color: blue;
+}
+
+.tile-50 span.bonus-DW {
+    color: orange;
+}
+
+.tile-50 span.bonus-TW {
+    color: red;
+}
+
+.max-height {
+    max-height: 425px;
+    overflow: auto;
+}
+
+#modal-confirm h4 {
+    text-align: center;
+}
+
+.small {
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.height-auto {
+    height: auto !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.relative {
+    position: relative;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.offset05 {
+    margin-left: 50px;
+}
+
+.chat-16 {
+    background: url('../images/chat-16.png') no-repeat left;
+    padding-left: 18px;
+    margin-left: 5px;
+    color: #666;
+}
+
+.chat-24 {
+    background: url('../images/chat-24.png') no-repeat left;
+    padding-left: 27px;
+    margin-left: 10px;
+    color: #666;
+    font-size: 16px;
+}
+
+#round-table {
+    margin-left: 5px;
+}
+
+#round-timeout-clock {
+    margin-top: 20px;
+    margin-left: 8px;
+}
+
+#round-timeout-clock div.cntSeparator {
+    display: none;
+}
+
+.columns {
+ -moz-column-count: 5;
+ -webkit-column-count: 5;
+ -moz-column-gap: 2em;
+ -webkit-column-gap: 2em;
+ column-count: 5;
+ -moz-column-rule-style: solid;
+ -moz-column-rule-color: #fff;
+ -moz-column-rule-width: 2px;
+ -webkit-column-rule-style: solid;
+ -webkit-column-rule-color: #fff;
+ -webkit-column-rule-width: 2px;
+}
