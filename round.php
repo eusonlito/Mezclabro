@@ -26,6 +26,7 @@ if ($Game->game_status !== 'ENDED') {
             $Theme->setMessage(__('Your words were set successfully'), 'success');
 
             $Game = $Api->getGame($Game->id, true);
+            $Round = $Api->getRound($Game->id, $_GET['round']);
         } else {
             $Theme->setMessage(__('Some error occours triying to play yours words. Please try it again.'), 'error');
         }
