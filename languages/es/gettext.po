@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mezclabro!\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-26 15:03+0100\n"
-"PO-Revision-Date: 2012-12-26 15:21+0100\n"
+"POT-Creation-Date: 2012-12-26 21:14+0100\n"
+"PO-Revision-Date: 2012-12-26 21:15+0100\n"
 "Last-Translator: Lito <lito@eordes.com>\n"
 "Language-Team: Lito <lito@eordes.com>\n"
 "Language: es_ES\n"
@@ -41,11 +41,11 @@ msgstr ""
 
 #: round.php:28
 msgid ""
-"Some error occours triying to load this round. Are you sure that is your "
-"turn?."
+"Some error occours triying to load this round. You sure that this round has "
+"already started?"
 msgstr ""
-"Ha ocurrido algún error intentando cargar esta ronda. Estas seguro que es tu "
-"turno?"
+"Ha ocurrido algún error intentando cargar esta ronda. Estas seguro de que "
+"esta ronda ya ha comenzado?"
 
 #: new.php:13
 msgid "Sorry but you can't play now. You was added to a waiting list."
@@ -53,15 +53,15 @@ msgstr ""
 "Lo sentimos pero no hay partidas disponibles. Has sido añadido a la lista de "
 "espera."
 
-#: new.php:20 themes/default/new.php:4 themes/default/base.php:134
+#: new.php:20 themes/default/new.php:4 themes/default/base.php:132
 msgid "New Game"
 msgstr "Nueva Partida"
 
-#: index.php:6 themes/default/base.php:76
+#: index.php:6 themes/default/base.php:74
 msgid "Home"
 msgstr "Inicio"
 
-#: about.php:27 themes/default/base.php:129
+#: about.php:27 themes/default/base.php:127
 msgid "About"
 msgstr "Sobre"
 
@@ -261,36 +261,40 @@ msgid "You are playing for <strong>%s</strong> points"
 msgstr "Estás jugando por <strong>%s</strong> puntos"
 
 #: themes/default/round.php:38
-msgid "Filter suggested words"
-msgstr "Filtrar palabras sugeridas"
+msgid "Filter words..."
+msgstr "Filtrar palabras..."
 
 #: themes/default/round.php:43
-msgid "Check/Uncheck all"
-msgstr "Marcar/Desmarcar todo"
+msgid "Filter points..."
+msgstr "Filtrar puntos..."
 
-#: themes/default/round.php:71
+#: themes/default/round.php:47
+msgid "Check/Uncheck"
+msgstr "Marcar/Desmarcar"
+
+#: themes/default/round.php:75
 #, php-format
 msgid "Play for %s points!"
 msgstr "Juega por %s puntos!"
 
-#: themes/default/round.php:78
+#: themes/default/round.php:82
 msgid "Confirm your move"
 msgstr "Confirma tu movimiento"
 
-#: themes/default/round.php:82
+#: themes/default/round.php:86
 #, php-format
 msgid "Are you sure do you want to play for %s points?"
 msgstr "Estás seguro de querer jugar por %s puntos?"
 
-#: themes/default/round.php:86 themes/default/profile.php:116
+#: themes/default/round.php:90 themes/default/profile.php:116
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: themes/default/round.php:89
+#: themes/default/round.php:93
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: themes/default/round.php:101
+#: themes/default/round.php:105
 msgid "Filter my words"
 msgstr "Filtrar mis palabras"
 
@@ -360,8 +364,8 @@ msgstr "Cerrar"
 msgid "last move %s"
 msgstr "último movimiento %s"
 
-#: themes/default/new.php:14 themes/default/base.php:141
-#: themes/default/base.php:146 themes/default/about.php:20
+#: themes/default/new.php:14 themes/default/base.php:139
+#: themes/default/base.php:144 themes/default/about.php:20
 #: themes/default/profile.php:54 themes/default/profile.php:109
 msgid "language_"
 msgstr ""
@@ -399,7 +403,7 @@ msgid "No games here :)"
 msgstr "Ninguna partida aquí :)"
 
 #: themes/default/base.php:7 themes/default/base.php:11
-#: themes/default/base.php:12 themes/default/base.php:72
+#: themes/default/base.php:12 themes/default/base.php:70
 msgid "Mezclabro!"
 msgstr "Mezclabro!"
 
@@ -407,27 +411,27 @@ msgstr "Mezclabro!"
 msgid "Play to Mezcladitos/WordCrack online!"
 msgstr "Juega a Mezcladitos/WordCrack en línea!"
 
-#: themes/default/base.php:81
+#: themes/default/base.php:79
 msgid "Game"
 msgstr "Partida"
 
-#: themes/default/base.php:87 themes/default/base.php:93
+#: themes/default/base.php:85 themes/default/base.php:91
 msgid "My Profile"
 msgstr "Mi Perfil"
 
-#: themes/default/base.php:89
+#: themes/default/base.php:87
 msgid "User Profile"
 msgstr "Perfil del Usuario"
 
-#: themes/default/base.php:99 themes/default/js/strings.js.php:18
+#: themes/default/base.php:97 themes/default/js/strings.js.php:18
 msgid "Your Turn"
 msgstr "Tu turno"
 
-#: themes/default/base.php:121
+#: themes/default/base.php:119
 msgid "There aren't games waiting for you"
 msgstr "Non hay partidas esperándote"
 
-#: themes/default/base.php:135
+#: themes/default/base.php:133
 msgid "Logout"
 msgstr "Salir"
 
@@ -809,3 +813,6 @@ msgstr "No se encontraron usuarios..."
 #: ajax/chat.php:49
 msgid "There aren't any conversation in this game"
 msgstr "No hay ninguna conversación en esta partida"
+
+#~ msgid "Filter suggested words"
+#~ msgstr "Filtrar palabras sugeridas"

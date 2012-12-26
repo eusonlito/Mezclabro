@@ -885,7 +885,7 @@ class Mezclabro {
             return false;
         }
 
-        $words = '';
+        $words = $regular = '';
         $points = 0;
 
         foreach ($this->Round->board_words as $word) {
@@ -894,20 +894,25 @@ class Mezclabro {
             }
 
             $points += $word['points'];
-            $words .= ords2uni(implode('', array_keys($word['positions']))).':'.$word['points'].',';
+
+            $positions = array_map(function ($value) {
+                return chr($value + 1);
+            }, array_keys($word['positions']));
+
+            $words .= implode('', $positions).':'.$word['points'].',';
         }
 
         if (isset($this->Round->my_turn->powerups)) {
             $powerups = $this->Round->my_turn->powerups;
         } else {
-            $powerups = '';
+            $powerups = 'SAVE_NAMEMIX#SAVE_STATEAVAILABLE#SAVE_USAGE_COUNT-1#SAVE_DURATION1000;';
         }
 
         return $this->Curl->post('users/'.$this->user.'/games/'.$this->Game->id.'/rounds/'.$this->Game->turn, array(
-            'turn_type' => 'PLAY',
-            'words' => $words,
-            'points' => $points,
+            'words' => mb_substr($words, 0, -1),
             'power_ups' => $powerups,
+            'turn_type' => 'PLAY',
+            'points' => $points,
             'coins' => 0
         ));
     }

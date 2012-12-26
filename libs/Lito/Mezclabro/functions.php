@@ -166,18 +166,6 @@ function uni2ords ($str, $encoding = 'UTF-8')
     return $ords;
 }
 
-function ords2uni ($ords, $encoding = 'UTF-8')
-{
-    $str = '';
-    $len = count($ords);
-
-    for ($i = 0; $i < $len; $i++){
-        $str .= pack('N', $ords[$i]);
-    }
-
-    return mb_convert_encoding($str, $encoding, 'UCS-4BE');
-}
-
 function isAjax ()
 {
     if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && (strcasecmp('XMLHttpRequest', $_SERVER['HTTP_X_REQUESTED_WITH']) === 0)) {
@@ -267,4 +255,14 @@ function getTurnsResume ($Game)
     }
 
     return $text;
+}
+
+function unicode_decode($str){
+    return preg_replace("/\\\u([0-9A-F]{4})/ie", "iconv('utf-16', 'utf-8', hex2str(\"$1\"))", $str);    
+}
+function hex2str($hex) {
+    $r = '';
+    for ($i = 0; $i < strlen($hex) - 1; $i += 2)
+    $r .= chr(hexdec($hex[$i] . $hex[$i + 1]));
+    return $r;
 }

@@ -80,21 +80,23 @@ $(document).ready(function () {
     });
 
     $('.filter-list').keyup(function (e) {
+        var $base = $($(this).data('filtered'));
+        var $checkbox = $base.find('input[type="checkbox"]');
+
         if (e.keyCode === 27) {
             $(this).val('');
 
-            $($(this).data('filtered')).find('input[type="checkbox"]').attr('checked', 'checked');
+            $checkbox.attr('checked', 'checked');
 
-            $($(this).data('filtered')).show();
+            $base.show();
 
             return false;
         }
 
         var filter = $(this).val();
-        var length = $(this).val().length;
 
-        if (length > 0) {
-            $($(this).data('filtered')).each(function () {
+        if ($(this).val().length > 0) {
+            $base.each(function () {
                 var $this = $(this);
 
                 if ($this.text().indexOf(filter) !== -1) {
@@ -106,8 +108,63 @@ $(document).ready(function () {
                 }
             });
         } else {
-            $($(this).data('filtered')).find('input[type="checkbox"]').attr('checked', 'checked');
-            $($(this).data('filtered')).show();
+            $checkbox.attr('checked', 'checked');
+            $base.show();
+        }
+
+        setPoints();
+    }).keydown(function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+        }
+    });
+
+    $('.filter-points').keyup(function (e) {
+        var $base = $($(this).data('filtered'));
+        var $checkbox = $base.find('input[type="checkbox"]');
+
+        if (e.keyCode === 27) {
+            $(this).val('');
+
+            $checkbox.attr('checked', 'checked');
+
+            $base.show();
+
+            return false;
+        }
+
+        var filter = parseInt($(this).val());
+
+        if (filter > 10) {
+            $base.hide();
+            $checkbox.attr('checked', false);
+
+            for (var i = $base.length, items = []; i--;) {
+                items.push(i);
+            }
+
+            items.sort(function(){
+                return Math.round(Math.random()) - 0.5;
+            });
+
+            var $span = $base.find('span');
+            var points = 0;
+
+            for (i = (items.length - 1); (points < filter) && (i >= 0); i--) {
+                var point = parseInt($span[items[i]].innerHTML);
+
+                if ((point + points) > filter) {
+                    continue;
+                }
+
+                points += point;
+
+                $checkbox.eq(items[i]).attr('checked', 'checked');
+                $base.eq(items[i]).show();
+            }
+        } else {
+            $checkbox.attr('checked', 'checked');
+            $base.show();
         }
 
         setPoints();

@@ -34,13 +34,17 @@
                 <?php } ?>
 
                 <div class="row-fluid">
-                    <div class="control-group span5 offset1">
-                        <input type="text" class="filter-list large input-block-level" data-filtered=".suggestion-words-list li" value="" placeholder="<?php __e('Filter suggested words'); ?>">
+                    <div class="control-group span3 offset1">
+                        <input type="text" class="filter-list input-block-level" data-filtered=".suggestion-words-list li" value="" placeholder="<?php __e('Filter words...'); ?>">
                     </div>
 
                     <?php if (isset($Game->my_turn) && $Game->my_turn) { ?>
-                    <div class="span6">
-                        <label class="checkbox inline"><input type="checkbox" name="checkall" data-related="[name='words\[\]']" checked="checked" /> <?php __e('Check/Uncheck all'); ?></label>
+                    <div class="span3">
+                        <input type="text" class="filter-points input-block-level" data-filtered=".suggestion-words-list li" value="" placeholder="<?php __e('Filter points...'); ?>">
+                    </div>
+
+                    <div class="pull-right">
+                        <label class="checkbox inline"><input type="checkbox" name="checkall" data-related="[name='words\[\]']" checked="checked" /> <?php __e('Check/Uncheck'); ?></label>
                     </div>
                     <?php } ?>
                 </div>

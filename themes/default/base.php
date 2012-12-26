@@ -22,8 +22,6 @@
         <link href="<?php echo BASE_THEME; ?>css/styles.css?1" type="text/css" rel="stylesheet" />
 
         <script src="<?php echo BASE_THEME; ?>js/jquery.min.js" type="text/javascript"></script>
-        <script src="<?php echo BASE_THEME; ?>js/jquery-ui/js/jquery-ui-1.8.22.custom.min.js" type="text/javascript"></script>
-        <script src="<?php echo BASE_THEME; ?>js/jquery-ui/js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
         <script src="<?php echo BASE_THEME; ?>bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="<?php echo BASE_THEME; ?>js/jquery.timeago.js" type="text/javascript"></script>
         <script src="<?php echo BASE_THEME; ?>js/jquery.countdown.min.js" type="text/javascript"></script>
