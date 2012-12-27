@@ -211,11 +211,7 @@ function getLastTurnMessage ($Game, $Current = null)
 
     if ($Game->game_status === 'ENDED') {
         if ($Game->ended_reason === 'NORMAL') {
-            if ($Game->last_turn->type === 'REJECT') {
-                return __('%s does\'t wants to play', $Game->opponent->name);
-            } else if ($Game->last_turn->type === 'RESIGN') {
-                return __('%s has resigned. You win!', $Game->opponent->name);
-            } else if ($Game->win) {
+            if ($Game->win) {
                 return __('Game versus %s was ended. You win!', $Game->opponent->name);
             } else {
                 return __('Game versus %s was ended. You lost :(', $Game->opponent->name);
@@ -226,6 +222,10 @@ function getLastTurnMessage ($Game, $Current = null)
             } else {
                 return __('Game versus %s was expired. You lost :(', $Game->opponent->name);
             }
+        } else if ($Game->ended_reason === 'REJECT') {
+            return __('%s does\'t wants to play', $Game->opponent->name);
+        } else if ($Game->ended_reason === 'RESIGN') {
+            return __('%s has resigned. You win!', $Game->opponent->name);
         }
     }
 

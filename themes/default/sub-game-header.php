@@ -13,8 +13,8 @@
                 echo ' ('.($Game->my_turn ? __('Your turn') : __('Opponent turn')).')';
             } else if ($Game->ended_reason === 'EXPIRED') {
                 echo ' ('.__('EXPIRED').')';
-            } else if (isset($Game->last_turn->type) && ($Game->last_turn->type !== 'PLACE_TILE')) {
-                echo ' ('.__($Game->last_turn->type).')';
+            } else if (isset($Game->ended_reason) && ($Game->ended_reason !== 'NORMAL')) {
+                echo ' ('.__($Game->ended_reason).')';
             }
         ?></small>
 
@@ -38,24 +38,6 @@
             ?></small>
 
             <small class="label label-info"><?php echo $Game->language; ?></small>
-
-            <?php if (isset($Game->last_turn->words)) { ?>
-            <small class="label label-info"><?php
-                __e('Last words: %s', str_replace('-', ', ', $Game->last_turn->words));
-
-                if (isset($Game->last_turn->turn_points)) {
-                    echo ' - '.__('%s points', $Game->last_turn->turn_points);
-                }
-            ?></small>
-            <?php } else if (isset($Game->last_turn->type) && in_array($Game->last_turn->type, array('SWAP', 'PASS'))) { ?>
-            <small class="label label-important"><?php
-                if ($Game->last_turn->type === 'SWAP') {
-                    echo $Game->my_turn ? __('%s has swapped tiles', $Game->opponent->name) : __('You have swapped tiles');
-                } else {
-                    echo $Game->my_turn ? __('%s has passed the turn', $Game->opponent->name) : __('You have passed your turn');
-                }
-            ?></small>
-            <?php } ?>
 
             <?php echo getTurnsResume($Game); ?>
         </p>

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mezclabro!\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-27 20:58+0100\n"
-"PO-Revision-Date: 2012-12-27 20:58+0100\n"
+"POT-Creation-Date: 2012-12-27 23:06+0100\n"
+"PO-Revision-Date: 2012-12-27 23:06+0100\n"
 "Last-Translator: Lito <lito@eordes.com>\n"
 "Language-Team: Lito <lito@eordes.com>\n"
 "Language: es_ES\n"
@@ -180,33 +180,33 @@ msgstr "Es tu turno contra %s"
 
 #: libs/Lito/Mezclabro/functions.php:215
 #, php-format
-msgid "%s does't wants to play"
-msgstr "%s no quiere jugar contigo"
-
-#: libs/Lito/Mezclabro/functions.php:217
-#, php-format
-msgid "%s has resigned. You win!"
-msgstr "%s se ha rendido. Has ganado!"
-
-#: libs/Lito/Mezclabro/functions.php:219
-#, php-format
 msgid "Game versus %s was ended. You win!"
 msgstr "La partida contra %s ha finalizado. Has ganado!"
 
-#: libs/Lito/Mezclabro/functions.php:221
+#: libs/Lito/Mezclabro/functions.php:217
 #, php-format
 msgid "Game versus %s was ended. You lost :("
 msgstr "La partida contra %s ha finalizado. Has perdido :("
 
-#: libs/Lito/Mezclabro/functions.php:225
+#: libs/Lito/Mezclabro/functions.php:221
 #, php-format
 msgid "Game versus %s was expired. You win!"
 msgstr "La partida contra %s ha expirado. Has ganado!"
 
-#: libs/Lito/Mezclabro/functions.php:227
+#: libs/Lito/Mezclabro/functions.php:223
 #, php-format
 msgid "Game versus %s was expired. You lost :("
 msgstr "La partida contra %s ha expirado. Has perdido :("
+
+#: libs/Lito/Mezclabro/functions.php:226
+#, php-format
+msgid "%s does't wants to play"
+msgstr "%s no quiere jugar contigo"
+
+#: libs/Lito/Mezclabro/functions.php:228
+#, php-format
+msgid "%s has resigned. You win!"
+msgstr "%s se ha rendido. Has ganado!"
 
 #: libs/Lito/Mezclabro/functions.php:244
 #, php-format
@@ -253,15 +253,7 @@ msgid ""
 msgstr ""
 "Este reloj es sólo decorativo, puedes esperar para jugar tanto como quieras."
 
-#: themes/default/round.php:28
-msgid "Suggestions"
-msgstr "Sugerencias"
-
-#: themes/default/round.php:29
-msgid "Your words"
-msgstr "Tus palabras"
-
-#: themes/default/round.php:36
+#: themes/default/round.php:30
 #, php-format
 msgid ""
 "You are playing for <strong rel=\"words\">%s</strong> words and <strong rel="
@@ -270,19 +262,19 @@ msgstr ""
 "Estás jugando con <strong rel=\"words\">%s</strong> palabras y <strong rel="
 "\"points\">%s</strong> puntos"
 
-#: themes/default/round.php:42
+#: themes/default/round.php:35 themes/default/round.php:93
 msgid "Filter words..."
 msgstr "Filtrar palabras..."
 
-#: themes/default/round.php:47
+#: themes/default/round.php:39
 msgid "Filter points..."
 msgstr "Filtrar puntos..."
 
-#: themes/default/round.php:51
+#: themes/default/round.php:43
 msgid "Check/Uncheck"
 msgstr "Marcar/Desmarcar"
 
-#: themes/default/round.php:79
+#: themes/default/round.php:56
 #, php-format
 msgid ""
 "Play for <strong rel=\"words\">%s</strong> words and <strong rel=\"points\">"
@@ -291,11 +283,11 @@ msgstr ""
 "Jugar con <strong rel=\"words\">%s</strong> palabras y <strong rel=\"points"
 "\">%s</strong> puntos!"
 
-#: themes/default/round.php:86
+#: themes/default/round.php:63
 msgid "Confirm your move"
 msgstr "Confirma tu movimiento"
 
-#: themes/default/round.php:90
+#: themes/default/round.php:67
 #, php-format
 msgid ""
 "Are you sure do you want to play for <strong rel=\"words\">%s</strong> words "
@@ -304,19 +296,27 @@ msgstr ""
 "Estás seguro de querer jugar con <strong rel=\"words\">%s</strong> palabras "
 "y <strong rel=\"points\">%s</strong> puntos?"
 
-#: themes/default/round.php:94 themes/default/profile.php:116
+#: themes/default/round.php:71 themes/default/profile.php:116
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: themes/default/round.php:97
+#: themes/default/round.php:74
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: themes/default/round.php:110
+#: themes/default/round.php:85
+msgid "Suggestions"
+msgstr "Sugerencias"
+
+#: themes/default/round.php:86
+msgid "Your words"
+msgstr "Tus palabras"
+
+#: themes/default/round.php:108
 msgid "Filter my words"
 msgstr "Filtrar mis palabras"
 
-#: themes/default/round.php:114
+#: themes/default/round.php:112
 #, php-format
 msgid ""
 "You have played for <strong>%s</strong> words and <strong>%s</strong> points"
@@ -332,7 +332,7 @@ msgstr "Tu turno"
 msgid "Opponent turn"
 msgstr "Turno del oponente"
 
-#: themes/default/sub-game-header.php:15 aux/dynamic-strings.php:23
+#: themes/default/sub-game-header.php:15 aux/dynamic-strings.php:25
 msgid "EXPIRED"
 msgstr "EXPIRADA"
 
@@ -345,43 +345,15 @@ msgstr "Tienes %s mensajes de chat"
 msgid "Back to game"
 msgstr "Volver al juego"
 
-#: themes/default/sub-game-header.php:44
-#, php-format
-msgid "Last words: %s"
-msgstr "Últimas palabras: %s"
-
-#: themes/default/sub-game-header.php:47
-#, php-format
-msgid "%s points"
-msgstr "%s puntos"
-
-#: themes/default/sub-game-header.php:53
-#, php-format
-msgid "%s has swapped tiles"
-msgstr "%s ha cambiado fichas"
-
-#: themes/default/sub-game-header.php:53
-msgid "You have swapped tiles"
-msgstr "Has cambiado fichas"
-
-#: themes/default/sub-game-header.php:55
-#, php-format
-msgid "%s has passed the turn"
-msgstr "%s ha pasado el turno"
-
-#: themes/default/sub-game-header.php:55
-msgid "You have passed your turn"
-msgstr "Has pasado tu turno"
-
-#: themes/default/sub-game-header.php:69
+#: themes/default/sub-game-header.php:51
 msgid "Chat"
 msgstr "Chat"
 
-#: themes/default/sub-game-header.php:77
+#: themes/default/sub-game-header.php:59
 msgid "Send"
 msgstr "Enviar"
 
-#: themes/default/sub-game-header.php:82
+#: themes/default/sub-game-header.php:64
 msgid "Close"
 msgstr "Cerrar"
 
@@ -803,28 +775,28 @@ msgid "RESIGN"
 msgstr "RENDICIÓN"
 
 #: aux/dynamic-strings.php:22
+msgid "RESIGNED"
+msgstr "RENDICIÓN"
+
+#: aux/dynamic-strings.php:23
 msgid "REJECT"
 msgstr "RECHAZADA"
 
 #: aux/dynamic-strings.php:24
+msgid "REJECTED"
+msgstr "RECHAZADA"
+
+#: aux/dynamic-strings.php:26
 msgid "PENDING_MY_APPROVAL"
 msgstr "PENDIENTE DE MI APROBACIÓN"
 
-#: aux/dynamic-strings.php:25
+#: aux/dynamic-strings.php:27
 msgid "PENDING_FIRST_MOVE"
 msgstr "PENDIENTE DE PRIMER MOVIMIENTO"
 
-#: aux/dynamic-strings.php:26
+#: aux/dynamic-strings.php:28
 msgid "PENDING_FRIENDS_APPROVAL"
 msgstr "PENDIENTE DE APROBACIÓN DEL RIVAL"
-
-#: aux/dynamic-strings.php:27
-msgid "PLACE_TILE"
-msgstr "COLOCAR FICHA"
-
-#: aux/dynamic-strings.php:28
-msgid "PASS"
-msgstr "PASA"
 
 #: ajax/push.php:45
 #, php-format
@@ -838,6 +810,30 @@ msgstr "No se encontraron usuarios..."
 #: ajax/chat.php:49
 msgid "There aren't any conversation in this game"
 msgstr "No hay ninguna conversación en esta partida"
+
+#~ msgid "Last words: %s"
+#~ msgstr "Últimas palabras: %s"
+
+#~ msgid "%s points"
+#~ msgstr "%s puntos"
+
+#~ msgid "%s has swapped tiles"
+#~ msgstr "%s ha cambiado fichas"
+
+#~ msgid "You have swapped tiles"
+#~ msgstr "Has cambiado fichas"
+
+#~ msgid "%s has passed the turn"
+#~ msgstr "%s ha pasado el turno"
+
+#~ msgid "You have passed your turn"
+#~ msgstr "Has pasado tu turno"
+
+#~ msgid "PLACE_TILE"
+#~ msgstr "COLOCAR FICHA"
+
+#~ msgid "PASS"
+#~ msgstr "PASA"
 
 #~ msgid "Play for %s points!"
 #~ msgstr "Juega por %s puntos!"
