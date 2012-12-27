@@ -34,7 +34,7 @@
             <small class="label"><abbr class="timeago" title="<?php echo timeAgo($Game->last_play_date); ?>"><?php echo humanDate($Game->last_play_date); ?></abbr></small>
 
             <small class="label label-<?php echo ($Game->my_score > $Game->opponent_score) ? 'success' : 'important'; ?>"><?php
-                echo $Game->my_score.' / '.$Game->opponent_score;
+                echo $Game->my_score.' / '.$Game->opponent_score.' ( '.($Game->my_score - $Game->opponent_score).' )';
             ?></small>
 
             <small class="label label-info"><?php echo $Game->language; ?></small>
