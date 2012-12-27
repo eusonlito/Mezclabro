@@ -33,6 +33,10 @@ if ($Game->game_status !== 'ENDED') {
     }
 }
 
+$Game->messages = $Api->getChat();
+
+$chat_id = $Game->messages ? md5(end($Game->messages)->date) : '';
+
 $Theme->meta('title', __('Game versus %s', $Game->opponent->name));
 
 include ($Theme->get('base.php'));

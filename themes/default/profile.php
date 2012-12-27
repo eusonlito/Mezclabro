@@ -191,7 +191,13 @@
         <?php } ?>
 
         <p class="alert alert-info">
-            <?php __e('last login <strong>%s</strong>', humanDate($User->last_log)); ?>
+            <?php
+            if (isset($User->last_log)) {
+                __e('last login <strong>%s</strong>', humanDate($User->last_log));
+            } else {
+                __e('unknown last login');
+            }
+            ?>
         </p>
     </div>
 </div>

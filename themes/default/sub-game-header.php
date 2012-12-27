@@ -1,7 +1,5 @@
 <?php defined('BASE_PATH') or die(); ?>
 
-<script src="<?php echo BASE_THEME; ?>js/chat.js" type="text/javascript"></script>
-
 <div class="page-header">
     <h1>
         <a href="<?php echo BASE_WWW; ?>profile.php?id=<?php echo $Game->opponent->id; ?>"><?php
@@ -20,9 +18,13 @@
             }
         ?></small>
 
+        <?php if (isset($Game->messages)) { ?>
+        <script src="<?php echo BASE_THEME; ?>js/chat.js" type="text/javascript"></script>
+
         <a href="#" class="chat-24" title="<?php __e('You have %s chat messages', count($Game->messages)); ?>"><?php
             echo $Game->messages ? count($Game->messages) : '';
         ?></a>
+        <?php } ?>
 
         <p>
             <?php if (FILENAME === 'round.php') { ?>
@@ -60,6 +62,7 @@
     </h1>
 </div>
 
+<?php if (isset($Game->messages)) { ?>
 <div id="modal-chat" class="modal hide">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button>
@@ -79,3 +82,4 @@
         <a href="#" class="btn" data-dismiss="modal"><i class="icon-remove"></i> <?php __e('Close'); ?></a>
     </div>
 </div>
+<?php } ?>

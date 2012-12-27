@@ -21,7 +21,13 @@
             <div class="span9">
                 <h4><a href="<?php echo BASE_WWW; ?>profile.php?id=<?php echo $User->id; ?>"><?php echo $User->name; ?></a></h4>
 
-                <small class="label"><?php echo __('last login %s', humanDate($User->last_log)); ?></small>
+                <small class="label"><?php
+                if (isset($User->last_log)) {
+                    __e('last login <strong>%s</strong>', humanDate($User->last_log));
+                } else {
+                    __e('unknown last login');
+                }
+                ?></small>
             </div>
         </div>
     </div>

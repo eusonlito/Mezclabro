@@ -393,6 +393,10 @@ class Mezclabro {
             return array();
         }
 
+        usort($Games->list, function ($a, $b) {
+            return ($a->last_play_date > $b->last_play_date) ? -1 : 1;
+        });
+
         foreach ($Games->list as $Game) {
             if ($Game->game_status === 'RANDOM') {
                 continue;
@@ -846,7 +850,9 @@ class Mezclabro {
             return array();
         }
 
-        krsort($Chat->list);
+        usort($Chat->list, function ($a, $b) {
+            return (strtotime($a->date) > strtotime($b->date) ? 1 : -1);
+        });
 
         return $Chat->list;
     }
