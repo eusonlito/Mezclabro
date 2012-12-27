@@ -8,12 +8,16 @@
             <?php echo $Api->getBoard(); ?>
         </table>
 
-        <?php if (isset($Game->my_turn) && $Game->my_turn) { ?>
+        <?php if ($Game->my_turn) { ?>
 
-        <div id="round-timeout-clock"></div>
+        <div id="round-timeout-clock" class="clearfix"></div>
 
         <div id="round-timeout-alert" class="alert alert-success center mt-20 hide">
             <strong><?php __e('It\'s time to play!'); ?></strong>
+        </div>
+
+        <div class="mt-10">
+            <small><?php __e('This clock is only for decoration, you can wait to play all as you want.'); ?></small>
         </div>
 
         <?php } ?>
@@ -27,9 +31,9 @@
 
         <div class="tab-content">
             <div class="tab-pane active" id="tab-suggested-words">
-                <?php if (isset($Game->my_turn) && $Game->my_turn) { ?>
+                <?php if ($Game->my_turn) { ?>
                 <div id="playinfor-alert" class="alert alert-success center">
-                    <?php __e('You are playing for <strong>%s</strong> points', $Round->total_points); ?>
+                    <?php __e('You are playing for <strong rel="words">%s</strong> words and <strong rel="points">%s</strong> points', $Round->total_words, $Round->total_points); ?>
                 </div>
                 <?php } ?>
 
@@ -38,7 +42,7 @@
                         <input type="text" class="filter-list input-block-level" data-filtered=".suggestion-words-list li" value="" placeholder="<?php __e('Filter words...'); ?>">
                     </div>
 
-                    <?php if (isset($Game->my_turn) && $Game->my_turn) { ?>
+                    <?php if ($Game->my_turn) { ?>
                     <div class="span3">
                         <input type="text" class="filter-points input-block-level" data-filtered=".suggestion-words-list li" value="" placeholder="<?php __e('Filter points...'); ?>">
                     </div>
@@ -49,12 +53,12 @@
                     <?php } ?>
                 </div>
 
-                <?php if (isset($Game->my_turn) && $Game->my_turn) { ?>
+                <?php if ($Game->my_turn) { ?>
                 <form id="game-form" action="?id=<?php echo $Game->id; ?>&amp;round=<?php echo $Game->turn; ?>" method="post" class="form-horizontal">
                 <?php } ?>
 
                 <ul class="suggestion-words-list columns">
-                    <?php if (isset($Game->my_turn) && $Game->my_turn) { ?>
+                    <?php if ($Game->my_turn) { ?>
 
                     <?php foreach ($Round->board_words as $word) { ?>
                     <li><label><input type="checkbox" name="words[]" value="<?php echo $word['word']; ?>" checked="checked" /> <?php echo $word['word'].' <span class="pull-right small">'.$word['points'].'</span>'; ?><label></li>
@@ -69,10 +73,10 @@
                     <?php } ?>
                 </ul>
 
-                <?php if (isset($Game->my_turn) && $Game->my_turn) { ?>
+                <?php if ($Game->my_turn) { ?>
                 <div class="form-actions">
                     <a href="#modal-confirm" id="button-confirm" data-toggle="modal" class="btn btn-large btn-success">
-                        <i class="icon-ok icon-white"></i> <?php __e('Play for %s points!', $Round->total_points); ?>
+                        <i class="icon-ok icon-white"></i> <?php __e('Play for <strong rel="words">%s</strong> words and <strong rel="points">%s</strong> points!', $Round->total_words, $Round->total_points); ?>
                     </a>
                 </div>
 
@@ -83,7 +87,7 @@
                     </div>
 
                     <div class="modal-body">
-                        <?php __e('Are you sure do you want to play for %s points?', $Round->total_points); ?>
+                        <?php __e('Are you sure do you want to play for <strong rel="words">%s</strong> words and <strong rel="points">%s</strong> points?', $Round->total_words, $Round->total_points); ?>
                     </div>
 
                     <div class="modal-footer">
@@ -101,8 +105,14 @@
 
             <?php if (isset($Round->my_turn)) { ?>
             <div class="tab-pane" id="tab-my-words">
-                <div class="control-group">
-                    <input type="text" class="span5 filter-list" data-filtered=".my-words-list li" value="" placeholder="<?php __e('Filter my words'); ?>">
+                <div class="row-fluid">
+                    <div class="control-group span5 offset1">
+                        <input type="text" class="filter-list input-block-level" data-filtered=".my-words-list li" value="" placeholder="<?php __e('Filter my words'); ?>">
+                    </div>
+
+                    <div class="pull-right">
+                        <label class="checkbox inline"><?php __e('You have played for <strong>%s</strong> words and <strong>%s</strong> points', count($Round->my_turn->words), $Round->my_turn->points); ?></label>
+                    </div>
                 </div>
 
                 <ul class="my-words-list columns">

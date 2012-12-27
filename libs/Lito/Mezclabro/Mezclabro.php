@@ -500,6 +500,8 @@ class Mezclabro {
         $Game->turn = intval($turn);
         $Game->turns = $turns;
 
+        $Game->my_turn = isset($Game->my_turn) ? $Game->my_turn : false;
+
         $this->Game = $Game;
 
         $this->Timer->mark('END: Mezclabro->preloadGame');
@@ -538,6 +540,8 @@ class Mezclabro {
         $Round->bonus = $this->getBonus($Round->bonus);
 
         $Round->board_words = $this->getBoardWords($Round->board_words, $Round->board, $Round->bonus);
+
+        $Round->total_words = count($Round->board_words);
 
         $Round->total_points = 0;
 

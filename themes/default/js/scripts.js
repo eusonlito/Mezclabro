@@ -80,6 +80,8 @@ $(document).ready(function () {
     });
 
     $('.filter-list').keyup(function (e) {
+        $('.filter-points').val('');
+
         var $base = $($(this).data('filtered'));
         var $checkbox = $base.find('input[type="checkbox"]');
 
@@ -120,6 +122,8 @@ $(document).ready(function () {
     });
 
     $('.filter-points').keyup(function (e) {
+        $('.filter-list').val('');
+
         var $base = $($(this).data('filtered'));
         var $checkbox = $base.find('input[type="checkbox"]');
 
@@ -292,25 +296,33 @@ function checkResponse (response, content) {
 }
 
 function setPoints () {
-    var points = 0;
+    var points = 0, words = 0, html = '';
 
     $('input[type="checkbox"][name="words\[\]"]').each(function () {
         if ($(this).is(':checked') && $(this).is(':visible')) {
             points += parseInt($(this).parent('label').find('span').text());
+            words++;
         }
     });
 
-    var html = $('#button-confirm').html();
+    var replaces = new Array(
+        /<strong rel="points">[0-9]+<\/strong>/,
+        '<strong rel="points">' + points + '</strong>',
+        /<strong rel="words">[0-9]+<\/strong>/,
+        '<strong rel="words">' + words + '</strong>'
+    );
 
-    $('#button-confirm').html(html.replace(/[0-9]+/, points));
+    html = $('#button-confirm').html().replace(replaces[0], replaces[1]).replace(replaces[2], replaces[3]);
 
-    html = $('#modal-confirm div.modal-body').html();
+    $('#button-confirm').html(html);
 
-    $('#modal-confirm div.modal-body').html(html.replace(/[0-9]+/, points));
+    html = $('#modal-confirm div.modal-body').html().replace(replaces[0], replaces[1]).replace(replaces[2], replaces[3]);
 
-    html = $('#playinfor-alert').html();
+    $('#modal-confirm div.modal-body').html(html);
 
-    $('#playinfor-alert').html(html.replace(/[0-9]+/, points));
+    html = $('#playinfor-alert').html().replace(replaces[0], replaces[1]).replace(replaces[2], replaces[3]);
+
+    $('#playinfor-alert').html(html);
 
     if (points === 0) {
          $('#button-confirm').attr('disabled', 'disabled');
