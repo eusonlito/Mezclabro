@@ -296,6 +296,10 @@ function checkResponse (response, content) {
 }
 
 function setPoints () {
+    if ($('#button-confirm').length == 0) {
+        return false;
+    }
+
     var points = 0, words = 0, html = '';
 
     $('input[type="checkbox"][name="words\[\]"]').each(function () {
