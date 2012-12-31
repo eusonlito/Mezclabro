@@ -7,6 +7,7 @@ require (__DIR__.'/../../../libs/Lito/Mezclabro/Loader-min.php');
 var strings = new Array();
 
 strings['waiting_reply'] = '<?php echo str_replace("\'", '&apos;', __('Waiting for reply...')); ?>';
+strings['wait_120'] = '<?php echo str_replace("\'", '&apos;', __('Calm Cowboy! You must wait at least 120 seconds from last turn!')); ?>';
 strings['please_wait'] = '<?php echo str_replace("\'", '&apos;', __('Please, wait...')); ?>';
 strings['sending'] = '<?php echo str_replace("\'", '&apos;', __('Sending...')); ?>';
 strings['no_results'] = '<?php echo str_replace("\'", '&apos;', __('No results for your query')); ?>';

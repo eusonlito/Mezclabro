@@ -30,6 +30,14 @@ $(document).ready(function () {
     });
 
     $('#game-form').submit(function () {
+        var last_play_date = $('button[type="submit"]', $(this)).val();
+        var now = new Date().getTime();
+
+        if ((now - 120) <= last_play_date) {
+            $('#modal-confirm .modal-body').html('<div class="alert alert-error"><div>' + strings['wait_120'] + '</div></div>');
+            return false;
+        }
+
         $('#modal-confirm .modal-header').hide();
         $('#modal-confirm .modal-footer').hide();
 

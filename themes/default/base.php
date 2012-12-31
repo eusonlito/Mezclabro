@@ -26,7 +26,7 @@
         <script src="<?php echo BASE_THEME; ?>js/jquery.timeago.js" type="text/javascript"></script>
         <script src="<?php echo BASE_THEME; ?>js/jquery.countdown.min.js" type="text/javascript"></script>
 
-        <script src="<?php echo BASE_THEME; ?>js/strings.js.php?lg=<?php echo $Gettext->getLanguage(); ?>" type="text/javascript"></script>
+        <script src="<?php echo BASE_THEME; ?>js/strings.js.php?1&amp;lg=<?php echo $Gettext->getLanguage(); ?>" type="text/javascript"></script>
         <script src="<?php echo BASE_THEME; ?>js/jquery.timeago.locale.js.php?lg=<?php echo $Gettext->getLanguage(); ?>" type="text/javascript"></script>
 
         <script type="text/javascript">
@@ -60,7 +60,7 @@
         })();
         </script>
 
-        <script src="<?php echo BASE_THEME; ?>js/scripts.js?2" type="text/javascript"></script>
+        <script src="<?php echo BASE_THEME; ?>js/scripts.js?3" type="text/javascript"></script>
     </head>
 
     <body>

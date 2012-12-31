@@ -19,7 +19,7 @@ if (isset($Game->my_turn) && $Game->turn != $_GET['round']) {
 }
 
 if ($Game->game_status !== 'ENDED') {
-    if (isset($_POST['play']) && ($_POST['play'] === 'true')) {
+    if (isset($_POST['play']) && (intval($_POST['play']) > 0)) {
         $success = $Api->playGame($_POST);
 
         if ($success) {

@@ -70,7 +70,7 @@
                 <div class="modal-footer">
                     <a href="#" class="btn" data-dismiss="modal"><i class="icon-remove"></i> <?php __e('Cancel'); ?></a>
 
-                    <button type="submit" name="play" value="true" class="btn btn-large btn-primary">
+                    <button type="submit" name="play" value="<?php echo strtotime($Game->last_play_date); ?>" class="btn btn-large btn-primary">
                         <i class="icon-ok icon-white"></i> <?php __e('Confirm'); ?>
                     </button>
                 </div>
