@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mezclabro!\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-27 23:06+0100\n"
-"PO-Revision-Date: 2012-12-27 23:06+0100\n"
+"POT-Creation-Date: 2012-12-31 17:35+0100\n"
+"PO-Revision-Date: 2012-12-31 17:36+0100\n"
 "Last-Translator: Lito <lito@eordes.com>\n"
 "Language-Team: Lito <lito@eordes.com>\n"
 "Language: es_ES\n"
@@ -421,7 +421,7 @@ msgstr "Mi Perfil"
 msgid "User Profile"
 msgstr "Perfil del Usuario"
 
-#: themes/default/base.php:97 themes/default/js/strings.js.php:18
+#: themes/default/base.php:97 themes/default/js/strings.js.php:19
 msgid "Your Turn"
 msgstr "Tu turno"
 
@@ -646,50 +646,56 @@ msgid "Waiting for reply..."
 msgstr "Esperando respuesta..."
 
 #: themes/default/js/strings.js.php:10
+msgid "Calm Cowboy! You must wait at least 120 seconds from last turn!"
+msgstr ""
+"Tranquilo Vaquero! Debes esperar por lo menos 120 segundos desde el último "
+"turno!"
+
+#: themes/default/js/strings.js.php:11
 msgid "Please, wait..."
 msgstr "Por favor, espera..."
 
-#: themes/default/js/strings.js.php:11
+#: themes/default/js/strings.js.php:12
 msgid "Sending..."
 msgstr "Enviando..."
 
-#: themes/default/js/strings.js.php:12
+#: themes/default/js/strings.js.php:13
 msgid "No results for your query"
 msgstr "Sin resultados para tu consulta"
 
-#: themes/default/js/strings.js.php:13
+#: themes/default/js/strings.js.php:14
 msgid "Are you sure that you want resign this game?!?"
 msgstr "Estas seguro de querer rendirte?"
 
-#: themes/default/js/strings.js.php:14
+#: themes/default/js/strings.js.php:15
 msgid "100% Sure?"
 msgstr "100% Seguro?"
 
-#: themes/default/js/strings.js.php:15
+#: themes/default/js/strings.js.php:16
 msgid "Some error occours with the server response. Please try it again."
 msgstr ""
 "Ha ocurrido algún error con la respuesta del servidor. Por favor, inténtalo "
 "de nuevo. Si el problema continúa, prueba a desconectarte y loguearte de "
 "nuevo."
 
-#: themes/default/js/strings.js.php:16
+#: themes/default/js/strings.js.php:17
 msgid "This screen has updates. Click here to reload it."
 msgstr "Esta pantalla tiene actualizaciones. Haz click aquí para recargarla."
 
-#: themes/default/js/strings.js.php:17
+#: themes/default/js/strings.js.php:18
 msgid "Updates!"
 msgstr "Actualizaciones!"
 
-#: themes/default/js/strings.js.php:19
+#: themes/default/js/strings.js.php:20
 msgid "You have new messages!"
 msgstr "Tienes nuevos mensajes!"
 
-#: themes/default/js/strings.js.php:20
+#: themes/default/js/strings.js.php:21
 #, php-format
 msgid "You have %s messages"
 msgstr "Tienes %s mensajes"
 
-#: themes/default/js/strings.js.php:21
+#: themes/default/js/strings.js.php:22
 msgid "You must select a language"
 msgstr "Debes seleccionar un idioma"
 
