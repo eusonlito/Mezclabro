@@ -394,7 +394,7 @@ class Mezclabro {
         }
 
         usort($Games->list, function ($a, $b) {
-            return ($a->last_play_date > $b->last_play_date) ? -1 : 1;
+            return (strtotime($a->last_play_date) > strtotime($b->last_play_date)) ? -1 : 1;
         });
 
         foreach ($Games->list as $Game) {
