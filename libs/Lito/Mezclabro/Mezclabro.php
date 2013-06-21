@@ -50,7 +50,7 @@ class Mezclabro {
     public function debug ($text, $trace = true)
     {
         if ($this->Debug) {
-            $this->Debug->{$this->Debug->$function}($text, $trace);
+            $this->Debug->{$this->Debug->function}($text, $trace);
         }
     }
 
@@ -60,7 +60,7 @@ class Mezclabro {
 
         $this->Curl->init($this->server);
 
-        $this->Curl->setOption(CURLOPT_USERAGENT, 'Android/4.0.4 Mezclabro/1.4.1.3');
+        $this->Curl->setOption(CURLOPT_USERAGENT, 'Android/SDK-16 Package:com.etermax.wordcrack.lite/Version:1.4.1');
         $this->Curl->setOption(CURLOPT_HTTPHEADER, array(
             'Content-Type: application/json; charset=utf-8',
             'Connection: Keep-Alive'
