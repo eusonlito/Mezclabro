@@ -256,13 +256,3 @@ function getTurnsResume ($Game)
 
     return $text;
 }
-
-function unicode_decode($str){
-    return preg_replace("/\\\u([0-9A-F]{4})/ie", "iconv('utf-16', 'utf-8', hex2str(\"$1\"))", $str);    
-}
-function hex2str($hex) {
-    $r = '';
-    for ($i = 0; $i < strlen($hex) - 1; $i += 2)
-    $r .= chr(hexdec($hex[$i] . $hex[$i + 1]));
-    return $r;
-}
